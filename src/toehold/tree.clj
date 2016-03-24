@@ -4,14 +4,14 @@
             [clojure.string :as string]
             [toehold.core :as c :refer :all]))
 
-;; vector-zip and seq-zip assume that branch nodes don't have content. This version
-;; is like vector-zip, but assumes all nodes can have content.
-;; Contentful-node zipper largely borrowed from
-;; http://grokbase.com/p/gg/clojure/12ag6cjnch/how-to-represent-trees-for-use-with-zippers
 
 (defrecord node [content children])
 
-(defn content-zipper [root]
+;; Contentful-node zipper largely borrowed from
+;; http://grokbase.com/p/gg/clojure/12ag6cjnch/how-to-represent-trees-for-use-with-zippers
+(defn content-zipper
+  "vector-zip and seq-zip assume that branch nodes don't have content. This version is like vector-zip, but assumes all nodes can have content."
+  [root]
   (z/zipper (comp coll? :children)
             :children
             (fn [nd children]

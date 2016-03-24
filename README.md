@@ -1,36 +1,21 @@
 # toehold
 
-FIXME: description
+Code challenge for job candidates. core.clj contains a basic tic tac toe
+simulation, with one key function left unimplemented. tree.clj is a namespace
+for representing a tree of all possible tic tac toe games. Both files contain
+;; CHALLENGE comments. See also tests in test/toehold.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Clone repo
 
 ## Usage
 
-FIXME: explanation
-
-    $ java -jar toehold-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+`lein repl` or `lein run`. `core.main` contains a minimum usage example
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2016
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.

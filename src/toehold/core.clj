@@ -13,7 +13,7 @@
 (def empty-board [[:_ :_ :_] [:_ :_ :_] [:_ :_ :_]])
 
 ;; Moves are a sequence of [x y p], where player is either :x or :o, and
-;; x, y indicates the row, column of the move.
+;; x, y indicates the column and row of the move.
 
 (defn occupied? [board x y ]
   (not= ((board x) y) :_))

@@ -4,16 +4,16 @@
 
 ;; Partial game example
 (def x1 [[1 1 :x] [1 2 :o] [2 2 :x] [2 0 :o]])
-(def b1 (board x1))
+(def b1 (board-from x1))
 
 ;; Completed game example (no win)
 (def x2 [[0 2 :x] [0 0 :o] [0 1 :x] [2 1 :o] [1 1 :x]
          [1 2 :o] [2 2 :x] [2 0 :o] [1 0 :x]])
-(def b2 (board x2))
+(def b2 (board-from x2))
 
 ;; Won game example
 (def x3 [[2 0 :x] [2 1 :o] [0 2 :x] [1 2 :o] [1 1 :x]])
-(def b3 (board x3))
+(def b3 (board-from x3))
 
 (deftest available-moves-test
   (testing "Available moves"

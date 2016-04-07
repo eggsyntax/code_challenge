@@ -31,7 +31,7 @@
 
 (defn after [mvs board] (reduce move board mvs))
 
-(defn board [mvs] (after mvs empty-board))
+(defn board-from [mvs] (after mvs empty-board))
 
 (defn cur-player  [moves] ([:x :o] (mod (count moves) 2)))
 (defn last-player [moves] ([:o :x] (mod (count moves) 2)))
@@ -39,10 +39,10 @@
 (defn- rand-player [] (rand-nth players))
 
 (defn- rand-valid-move [moves & [player]]
-  (let [board (board moves) ; memoize?
+  (let [board (board-from moves) ; memoize?
         avl-moves (available-moves board)]
     ;; (println "moves:" moves "(" (cur-player moves) ")")
-    ;; (println "board:" (board moves))
+    ;; (println "board:" (board-from moves))
     (assert (seq avl-moves) ; Make sure board's not full
             (str "No valid moves left on " board))
     (println "available moves:" avl-moves)
@@ -83,7 +83,7 @@ we do the same thing but for [2 1 0]."
 (defn win?
   "Given a list of moves, return the winning player (or nil if none)"
   [moves]
-  (first (keep check-triplet (triplets (board moves)))))
+  (first (keep check-triplet (triplets (board-from moves)))))
 
 (defn full-or-win? [moves]
   (or (full? moves) (win? moves)))
@@ -100,6 +100,6 @@ we do the same thing but for [2 1 0]."
   [& args]
   (let [game (rand-game)]
     (println "moves: " game)
-    (println "board at end of random game: " (board game))
+    (println "board at end of random game: " (board-from game))
     (println "winner: " (win? game))
     (println "final move: " (last game))))

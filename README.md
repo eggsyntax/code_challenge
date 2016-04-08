@@ -5,6 +5,12 @@ simulation, with one key function left unimplemented. tree.clj is a namespace
 for representing a tree of all possible tic tac toe games. Both files contain
 ;; CHALLENGE comments. See also tests in test/toehold.
 
+There's no expectation that you finish all challenges. We suggest limiting
+yourself to 10 hours of effort. We do also realize that this is testing for
+CS-theory sort of stuff more than for all the surrounding skills (deployment,
+library skills, etc), but this was the best we came up with for a tractable
+challenge.
+
 ## Installation
 
 Clone repo

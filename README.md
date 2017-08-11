@@ -8,8 +8,8 @@ for representing a tree of all possible tic tac toe games. Both files contain
 There's no expectation that you finish all challenges. We suggest limiting
 yourself to a few hours of effort. We do also realize that this is testing for
 CS-theory sort of stuff more than for all the surrounding skills (deployment,
-library skills, etc), but this was the best we came up with for a tractable
-challenge.
+library skills, etc), but those are hard to test in a relatively brief
+challenge like this.
 
 ## Installation
 

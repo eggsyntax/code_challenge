@@ -48,5 +48,5 @@
 ;; 1. What percentage of 100000 random games have no win?
 ;; 2. Given a partial game in a particular state, which player if any has
 ;;   a guaranteed win if they play optimally?
-;; 2. Under what conditions is player 2 (O) guaranteed a win?
-;; 2. Can X get a win if they blow 1st move?
+;; 3. Under what conditions is player 2 (O) guaranteed a win?
+;; 4. Can X get a win if they blow 1st move?

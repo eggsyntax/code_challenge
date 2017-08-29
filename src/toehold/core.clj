@@ -41,11 +41,8 @@
 (defn- rand-valid-move [moves & [player]]
   (let [board (board-from moves) ; memoize?
         avl-moves (available-moves board)]
-    ;; (println "moves:" moves "(" (cur-player moves) ")")
-    ;; (println "board:" (board-from moves))
     (assert (seq avl-moves) ; Make sure board's not full
             (str "No valid moves left on " board))
-    (println "available moves:" avl-moves)
     (conj moves
           (conj (rand-nth avl-moves)
                 (or player (cur-player moves))))))
